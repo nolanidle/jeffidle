@@ -2,14 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const floatVariants = {
-  animate: {
-    y: [0, -20, 0],
-    rotate: [-5, 5, -5],
-    transition: { duration: 6, repeat: Infinity, ease: "easeInOut" }
-  }
-};
-
 interface FloatingInstrumentsProps {
   show?: boolean;
 }
@@ -22,8 +14,8 @@ export function FloatingInstruments({ show = true }: FloatingInstrumentsProps) {
       {/* Drum - upper right */}
       <motion.div
         className="absolute top-20 right-10 text-6xl opacity-5"
-        variants={floatVariants}
-        animate="animate"
+        animate={{ y: [0, -20, 0], rotate: [-5, 5, -5] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         style={{ animationDelay: "0s" }}
       >
         🥁
@@ -32,8 +24,8 @@ export function FloatingInstruments({ show = true }: FloatingInstrumentsProps) {
       {/* Trumpet - lower left */}
       <motion.div
         className="absolute bottom-40 left-10 text-6xl opacity-5"
-        variants={floatVariants}
-        animate="animate"
+        animate={{ y: [0, -20, 0], rotate: [-5, 5, -5] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         style={{ animationDelay: "2s" }}
       >
         🎺
@@ -42,8 +34,8 @@ export function FloatingInstruments({ show = true }: FloatingInstrumentsProps) {
       {/* Guitar - upper left */}
       <motion.div
         className="absolute top-40 left-20 text-6xl opacity-5"
-        variants={floatVariants}
-        animate="animate"
+        animate={{ y: [0, -20, 0], rotate: [-5, 5, -5] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         style={{ animationDelay: "4s" }}
       >
         🎸
